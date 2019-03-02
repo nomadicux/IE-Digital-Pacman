@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Josh Hiles">
+    <meta name="description" content="IE Digital Code Challenge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="JavaScript.js"></script>
+    <title>IE Digital Code Challenge</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Pacman Grid Simulation</h1>
+        <div id="startingScreen">
+            <h2>Please enter a starting location for Pacman:</h2>
+            Starting X Position:<input type="text" class="coordinate" id="startingX"><br>
+            Starting Y Position:<input type="text" class="coordinate" id="startingY"><br>
+            Starting Orientation:
+            <select name="facing" id="startingOrientation">
+                <option value="NORTH">North</option>
+                <option value="EAST">East</option>
+                <option value="SOUTH">South</option>
+                <option value="WEST">West</option>
+            </select><br>
+            <button class="start-btn" onclick="start()">Place</button>
+        </div>
+        <div id="gameScreen">
+            <button class="direction-btn" onclick="left()">Left</button>
+            <button class="direction-btn" onclick="right()">Right</button><br>
+            <button class="move-btn" onclick="move()">Move</button><br>
+            <button class="start-btn" onclick="restart()">Re-place</button>
+        </div>
+        <h2>Position Report:</h2>
+        <p>(x,y,orientation)</p>
+        <p id="output">Positonal output will be here</p>
+    </div>
+</body>
+</html>
